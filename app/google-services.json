@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "244095214540",
+    "firebase_url": "https://magmag-e730d.firebaseio.com",
+    "project_id": "magmag-e730d",
+    "storage_bucket": "magmag-e730d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:244095214540:android:af1cab983b0fe6fc",
+        "android_client_info": {
+          "package_name": "com.google.firebase.quickstart.auth.magmag"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "244095214540-kkgn90m002cef277gftvhn1fu8nma21c.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.google.firebase.quickstart.auth.magmag",
+            "certificate_hash": "1a510a3e68a935b17c5f7abd0f583a6f2e3ec0a8"
+          }
+        },
+        {
+          "client_id": "244095214540-iuu5cge8ulfbniq6q6hboe9p572dp4lm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBVDMXFppBRQjfRxNWzvkULxIrSeQbA0lU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "244095214540-iuu5cge8ulfbniq6q6hboe9p572dp4lm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
