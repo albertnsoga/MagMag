@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/product_1"
+    tools:context=".LoginActivity">
+
+
+
+    <ImageView
+        android:id="@+id/login_applogo"
+        android:layout_width="302dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="100dp"
+        android:src="@drawable/logo" />
+
+
+    <Button
+
+        android:id="@+id/logout_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linear_layout_1"
+
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="-217dp"
+        android:background="@drawable/buttons"
+        android:padding="17dp"
+        android:text="Login out"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:textSize="18sp" />
+
+
+
+
+</RelativeLayout>
