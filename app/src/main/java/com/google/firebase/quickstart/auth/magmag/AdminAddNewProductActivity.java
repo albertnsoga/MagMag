@@ -4,7 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class AdminAddNewProductActivity extends AppCompatActivity
 {
-   /* private String CategoryName, Description, Price, Pname, saveCurrentDate, saveCurrentTime;
+ /*   private String CategoryName, Description, Price, Pname, saveCurrentDate, saveCurrentTime;
     private Button AddNewProductButton;
     private ImageView InputProductImage;
     private EditText InputProductName, InputProductDescription, InputProductPrice;

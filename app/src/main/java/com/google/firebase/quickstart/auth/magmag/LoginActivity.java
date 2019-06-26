@@ -132,24 +132,50 @@ public class LoginActivity extends AppCompatActivity
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot)
             {
-                Log.v("onDataChange","On est passé par la");
-                if (dataSnapshot.child(parentDbName).child(phone).exists()) {
-                    Log.v("parentDbName", "On est passé par la aussi");
+                Log.v("onDataChange", "On est passé par la 4");
+                if (dataSnapshot.child(parentDbName).child(phone).exists())
+                {
+                    Log.v("parentDbName", "On est passé par la 5");
                     Users usersData = dataSnapshot.child(parentDbName).child(phone).getValue(Users.class);
 
-                    if (usersData.getPhone().equals(phone)) {
-                        Log.v("usersData.getPhone", "On est passé par la aussi 3 ");
-                        loadingBar.dismiss();
-                        Toast.makeText(LoginActivity.this, "logged in Successfully...", Toast.LENGTH_SHORT).show();
-                        loadingBar.dismiss();
+                    if (usersData.getPhone().equals(phone))
+                    {
+                        Log.v("getPhone", "On est passé par la 6");
 
-                        Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
-                        Prevalent.currentOnlineUser = usersData;
-                        startActivity(intent);
+                        if (usersData.getPassword().equals(password))
+                        {
+                            Log.v("getPassword", "On est passé par la 7");
+                            if (parentDbName.equals("Admins"))
+                            {
+                                Toast.makeText(LoginActivity.this, "Welcome Admin, you are logged in Successfully...", Toast.LENGTH_SHORT).show();
+                                loadingBar.dismiss();
+
+                                Intent intent = new Intent(LoginActivity.this, AdminCategoryActivity.class);
+                                startActivity(intent);
+                            }
+                            else if (parentDbName.equals("Users"))
+                            {
+                                Toast.makeText(LoginActivity.this, "logged in Successfully...", Toast.LENGTH_SHORT).show();
+                                loadingBar.dismiss();
+
+                                Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
+                                Prevalent.currentOnlineUser = usersData;
+                                startActivity(intent);
+                            }
+                        }
+                        else
+                        {
+                            loadingBar.dismiss();
+                            Toast.makeText(LoginActivity.this, "Password is incorrect.", Toast.LENGTH_SHORT).show();
+                        }
                     }
-                }}
-
-
+                }
+                else
+                {
+                    Toast.makeText(LoginActivity.this, "Account with this " + phone + " number do not exists.", Toast.LENGTH_SHORT).show();
+                    loadingBar.dismiss();
+                }
+            }
 
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {

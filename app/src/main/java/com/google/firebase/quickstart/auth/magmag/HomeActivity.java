@@ -7,6 +7,8 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import io.paperdb.Paper;
+
 public class HomeActivity extends AppCompatActivity {
 
     private Button LogoutBtn;
@@ -19,6 +21,7 @@ public class HomeActivity extends AppCompatActivity {
         LogoutBtn.setOnClickListener((new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Paper.book().destroy();
                 Intent intent= new Intent(HomeActivity.this, MainActivity.class);
                 startActivity(intent);
 
